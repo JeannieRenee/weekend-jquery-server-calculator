@@ -17,8 +17,10 @@
     <header>
         <h1>mf calculator<h1>
     </header>
-    <container id = calculator>
-
+    <div id="display">
+        <p>This is where i expect to display buttons pressed</p>
+    </div>
+    <div id = calculator>
         <button class="button"> 7 </button>
         <button class="button"> 8 </button>
         <button class="button"> 9 </button>
@@ -35,12 +37,20 @@
         <button class="button"> - </button>
 
         <br>
-        <button class="button"> 0 </button>
         <button class="button"> clear </button>
+        <button class="button"> 0 </button>
         <button class="button"> . </button>
         <button class="button"> + </button>
         <br>
-    </container>
+        <button class="button" id="equals"> = </button>
+
+    </div>
+
+    <p>This is where i expect to display previous calculations</p>
+    <div>
+        <ul id="output">
+        </ul>
+    </div>
     
 </body>
 </html>

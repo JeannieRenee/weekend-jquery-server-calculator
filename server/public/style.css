@@ -1,15 +1,14 @@
-header {
+* {
     text-align: center;
+    font-family:Arial, Helvetica, sans-serif
 }
-
-.calculator {
-    text-align: center;
-  }
 
 .button {
     width: 100px;
     height: 100px;
     cursor: pointer;
-    align-items: center;
-
+}
+#equals {
+    height: 100px;
+    width: 415px;
 }
