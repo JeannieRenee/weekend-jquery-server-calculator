@@ -17,40 +17,26 @@
     <header>
         <h1>mf calculator<h1>
     </header>
-    <div id="display">
-        <p>This is where i expect to display buttons pressed</p>
-    </div>
+
     <div id = calculator>
-        <button class="button"> 7 </button>
-        <button class="button"> 8 </button>
-        <button class="button"> 9 </button>
-        <button class="button"> / </button>
-        <br>
-        <button class="button"> 4 </button>
-        <button class="button"> 5 </button>
-        <button class="button"> 6 </button>
-        <button class="button"> x </button>
-        <br>
-        <button class="button"> 1 </button>
-        <button class="button"> 2 </button>
-        <button class="button"> 3 </button>
-        <button class="button"> - </button>
-
-        <br>
-        <button class="button"> clear </button>
-        <button class="button"> 0 </button>
-        <button class="button"> . </button>
-        <button class="button"> + </button>
-        <br>
-        <button class="button" id="equals"> = </button>
-
+        <input type="number" id="first-input" placeholder="number"> </input>
+        <input type="text" id="operator" placeholder="+ - * /"> </input>
+        <input type="number" id="second-input" placeholder="number"> </input>
+        <button id="submit"> = </button>
+        <button id="clear"> clear </button>
     </div>
-
-    <p>This is where i expect to display previous calculations</p>
+    <div class="results">
+    </div>
     <div>
+        <p>History:</p>
         <ul id="output">
         </ul>
     </div>
-    
+
+    <!-- <button>+</button>
+    <button>-</button>
+    <button>*</button>
+    <button>/</button> -->
+
 </body>
 </html>
