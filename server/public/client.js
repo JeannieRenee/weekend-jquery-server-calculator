@@ -4,61 +4,58 @@ $(document).ready(onReady);
 
 function onReady() {
     //button click listener
-    $(document).on('click', '#submit', submitEquation);
-    $(document).on('click', '#clear', clearButton)
-
+    $(document).on('click', '#submit', submit);
+    $(document).on('click', '#clearButton', clearButton);
+    getFromServer()
 }
+
+// function to get data from the server 
+function getFromServer() {
+    $.ajax({
+        method: 'GET',
+        url: '/maths',
+    }).then(function(response) {
+        console.log("SUCCESS!");
+        displayResult(response)
+    }).catch(function(response) {
+        // notify the user
+        alert('Request failed. Try again later.');
+      }
+    );
+}
+
+// display results 
+function displayResult(response) {
+    $('#output').empty();
+  
+    for (let thing of response) {
+      $('#output').append(response.thing);
+    }
+}
+
+// creates object{newMathObject} and sends it to the server
+function submit(event) {
+    event.preventDefault();
+    //sends to server
+    $.ajax({
+        method: 'POST',
+        url: '/maths',
+        data: {
+            number1: $('#first-input').val(),
+            operator: $('#operator').val(),
+            number2: $('#second-input').val()
+            }
+        
+    }).then(function(response) {
+        console.log('post success');
+    }).catch(function(response) {
+        console.log("something is wrong");
+    });
+} 
 
 // clear inputs 
 function clearButton() {
-    // clear inputs
     $('#first-input').val('');
     $('#operator').val('');
     $('#second-input').val('')
 }
-
-// creates object{newMathObject} and pushes to array[maths]
-let maths=[]; 
-function submitEquation(num1, operator, num2) {
-    //get value 
-    const newMathObject = {
-      num1: $('#first-input').val(),
-      operator: $('#operator').val(),
-      num2: $('#second-input').val()
-    };
-    maths.push(newMathObject);
-    
-    //run arithmetic 
-    arithmetic(newMathObject);
-
-// Arithmetic functions below 
-    function arithmetic() {
-        let number1 = newMathObject.num1
-        let number2 = newMathObject.num2
-
-        if (newMathObject.operator === '+') {
-        result = (parseInt(number1)) + (parseInt(number2))
-        $('#output').append(`<li>${newMathObject.num1} ${newMathObject.operator} ${newMathObject.num2} = ${result} </li>`);
-        displayResults()
-        } else if (newMathObject.operator === '-') {
-        result = (parseInt(number1)) - (parseInt(number2))
-        $('#output').append(`<li>${newMathObject.num1} ${newMathObject.operator} ${newMathObject.num2} = ${result} </li>`);
-        displayResults()
-        } else if (newMathObject.operator === '*') {
-        result = (parseInt(number1)) * (parseInt(number2))
-        $('#output').append(`<li>${newMathObject.num1} ${newMathObject.operator} ${newMathObject.num2} = ${result} </li>`);
-        displayResults()
-        } else if (newMathObject.operator === '/') {
-        result = (parseInt(number1)) / (parseInt(number2))
-        $('#output').append(`<li>${newMathObject.num1} ${newMathObject.operator} ${newMathObject.num2} = ${result} </li>`);
-        displayResults()
-        }
-        return
-    }
-
-    function displayResults(){
-        let value = $( '.results' );
-        value.empty();     
-        value.append(`<p> ${result} </p>`);
-    } 
-} 
