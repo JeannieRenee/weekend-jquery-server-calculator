@@ -12,6 +12,8 @@ input {
     text-align: right; 
     padding: 1em;
     border-radius: 3px;
+    border-color: darkred;
+    font-size: 16px;
 }
 
 /* remove arrows on number inputs */
@@ -25,23 +27,65 @@ header, div, p {
     text-align: center;
 }
 
+button {
+    background-color: darkred; 
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 3px;
+
+  }
+
 p {
     font-weight: bold;
+    color: darkred;
 }
 
-ul {
-    display: inline-block;
-    background: #ff9999;
-    padding: 20px;
-    list-style-type: none;
-    width: 50%;
-    border-radius: 3px;
+.text {
+    color: black;
 }
 
-ul li {
+.results {
     background: #ffe5e5;
     color: darkred;
     padding: 5px;
     size: 500px;
     border-radius: 3px;
-  }
+}
+
+.answer {
+    margin: auto;
+    display: inline-block;
+    background: #ff9999;
+    padding: 10px;
+    width: 50%;
+    border-radius: 3px;
+}
+
+.history {
+    margin: auto;
+    display: inline-block;
+    background: #ff9999;
+    padding: 10px;
+    width: 50%;
+    border-radius: 3px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul li {
+    background: #ffe5e5;
+    color: darkred;
+    padding: 10px;
+    size: 500px;
+    border-radius: 3px;
+}
+
+
