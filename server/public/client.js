@@ -6,8 +6,7 @@ function onReady() {
     //button click listener
     $(document).on('click', '#submit', submit);
     $(document).on('click', '#clear', clearButton);
-    $(document).on('click', '#submit', displayMaths);
-    getFromServer()
+    $(document).on('click', '#submit', getFromServer);
 }
 
 // function to get data from the server 
@@ -26,11 +25,8 @@ function getFromServer() {
 }
 
 // display results
-/////// for some reason this isnt runnig when 
-//the submit button is pressed, only displaying 
-// the cached server data upon page reload. 
 function displayMaths(array) {
-    $('#output').empty();
+    $('.output').empty();
   
     for (thing of array) {
       $('.output').append(`<li> 
@@ -41,8 +37,7 @@ function displayMaths(array) {
       ${thing.result} 
       </li>`); 
     }
-    $('#results').empty();
-
+    $('.results').empty();
     $('.results').append(`<p> 
       ${thing.result} 
       </p>`); 
