@@ -41,24 +41,20 @@ function arithmetic(newMathObject) {
   let number1 = newMathObject.number1;
   let operator = newMathObject.operator;
   let number2 = newMathObject.number2;
-  let result;
+  let result = newMathObject.result
     if (operator === '+') {
-      result = (parseInt(number1)) + (parseInt(number2))
-
+      newMathObject.result = (parseInt(number1)) + (parseInt(number2))
     } else if (operator === '-') {
-      result = (parseInt(number1)) - (parseInt(number2));
-      console.log(result); 
+      newMathObject.result = (parseInt(number1)) - (parseInt(number2));
     } else if (operator === '*') {
-      result = (parseInt(number1)) * (parseInt(number2));
-      console.log(result);
+      newMathObject.result = (parseInt(number1)) * (parseInt(number2));
     } else if (operator === '/') {
-      result = (parseInt(number1)) / (parseInt(number2));
-      console.log(result); 
+      newMathObject.result = (parseInt(number1)) / (parseInt(number2));
     } else {
       console.log ('its mathing but idk');
     }
       maths.push(newMathObject);
-      console.log(result); 
+      console.log(newMathObject.result); 
       return 
   }
 

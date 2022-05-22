@@ -5,7 +5,8 @@ $(document).ready(onReady);
 function onReady() {
     //button click listener
     $(document).on('click', '#submit', submit);
-    $(document).on('click', '#clearButton', clearButton);
+    $(document).on('click', '#clear', clearButton);
+    $(document).on('click', '#submit', displayMaths);
     getFromServer()
 }
 
@@ -14,23 +15,37 @@ function getFromServer() {
     $.ajax({
         method: 'GET',
         url: '/maths',
-    }).then(function(response) {
+    }).then(function(array) {
         console.log("SUCCESS!");
-        displayResult(response)
+        displayMaths(array)
     }).catch(function(response) {
         // notify the user
-        alert('Request failed. Try again later.');
+        console.log('Request failed.');
       }
     );
 }
 
-// display results 
-function displayResult(response) {
+// display results
+/////// for some reason this isnt runnig when 
+//the submit button is pressed, only displaying 
+// the cached server data upon page reload. 
+function displayMaths(array) {
     $('#output').empty();
   
-    for (let thing of response) {
-      $('#output').append(response.thing);
+    for (thing of array) {
+      $('.output').append(`<li> 
+      ${thing.number1} 
+      ${thing.operator} 
+      ${thing.number2} 
+      =
+      ${thing.result} 
+      </li>`); 
     }
+    $('#results').empty();
+
+    $('.results').append(`<p> 
+      ${thing.result} 
+      </p>`); 
 }
 
 // creates object{newMathObject} and sends it to the server
@@ -43,7 +58,8 @@ function submit(event) {
         data: {
             number1: $('#first-input').val(),
             operator: $('#operator').val(),
-            number2: $('#second-input').val()
+            number2: $('#second-input').val(),
+            result: null
             }
         
     }).then(function(response) {
