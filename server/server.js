@@ -50,8 +50,13 @@ function arithmetic(newMathObject) {
       newMathObject.result = (parseInt(number1)) * (parseInt(number2));
     } else if (operator === '/') {
       newMathObject.result = (parseInt(number1)) / (parseInt(number2));
+    } else if (number1 === '' || number2 === ''|| operator === '') {
+      // i trie alert boxes but they dont work server side
+      console.log("😵‍💫 Check input and try again 😵‍💫");
+      return
     } else {
-      console.log ('its mathing but idk');
+      console.log("😵‍💫 Check input and try again 😵‍💫");
+      return
     }
       maths.push(newMathObject);
       console.log(newMathObject.result); 

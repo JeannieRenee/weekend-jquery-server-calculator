@@ -7,6 +7,7 @@ function onReady() {
     $(document).on('click', '#submit', submit);
     $(document).on('click', '#clear', clearButton);
     $(document).on('click', '#submit', getFromServer);
+    getFromServer()
 }
 
 // function to get data from the server 
