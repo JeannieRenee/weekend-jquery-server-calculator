@@ -7,7 +7,7 @@ const maths = require('./modules/modules')
 
 // Create an instance of express by calling the function returned above - gives us an object
 const app = express();
-const port = 5050;
+const PORT = process.env.PORT || 5000;
 
 // express static file serving - public is the folder name
 app.use(express.static('server/public'));
