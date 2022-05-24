@@ -18,7 +18,7 @@ app.use(bodyParser.json());
 
 // Start up our server
 app.listen(port, () => {
-  console.log('listening on port', port);
+  console.log('listening on port', PORT);
 });
 
 // create /maths path
