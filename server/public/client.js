@@ -63,7 +63,8 @@ function submit(event) {
     }).catch(function(response) {
         console.log("something is wrong");
     });
-} 
+     $('input').val('');
+    } 
 
 // clear inputs 
 function clearButton() {

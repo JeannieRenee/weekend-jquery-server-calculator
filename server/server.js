@@ -33,7 +33,7 @@ app.post('/maths', (req, res) => {
 
   // Grab the data from the request body and run calculations
   arithmetic(req.body);
-  res.send()
+  res.sendStatus(201);
 });
 
 //Arithmetic function 
