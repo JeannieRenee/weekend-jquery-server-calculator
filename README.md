@@ -8,7 +8,7 @@ This was one of the first applications I made, 8 weeks into learning how to code
 
 I was asked to create an calculator that stored previous calulations on a server.
 
-## Screen Shot
+## DEMO
 
 ![Alt Text](calculator.gif)
 
