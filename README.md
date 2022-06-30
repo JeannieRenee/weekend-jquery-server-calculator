@@ -4,11 +4,11 @@
 
 _Duration: 7 hours_
 
-This was one of the first applications I made, 8 weeks into learning how to code and only just learnign about servers.
+This was one of the first applications I made, 8 weeks into learning how to code and only three days into learning how to store data locally.
 
-I was asked to create an calculator that stored previous calulations on a server.
+I was asked to create a calculator that stores previous calulations on a server, and displays calculations to the webpage.
 
-## DEMO
+## Demo
 
 ![Alt Text](calculator.gif)
 
