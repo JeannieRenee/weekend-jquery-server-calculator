@@ -10,8 +10,9 @@ I was asked to create an calculator that stored previous calulations on a server
 
 ## Screen Shot
 
-![Alt Text](https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif)
-
+![Alt Text](https://giphy.com/embed/rVREtJQJ75pjgljUaJ)
+<!-- <iframe src="https://giphy.com/embed/rVREtJQJ75pjgljUaJ" width="346" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/rVREtJQJ75pjgljUaJ">via GIPHY</a></p>
+ -->
 ## Built With
 
 -Javascript 
