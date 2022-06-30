@@ -11,6 +11,8 @@ I was asked to create a calculator that stores previous calulations on a server,
 ## Demo
 
 ![Alt Text](calculator.gif)
+</br>
+To see the fully functional site, click [here]. (https://warm-castle-52041.herokuapp.com/)
 
 ## Built With
 
