@@ -1,4 +1,4 @@
-# Calculator
+# CALCULATOR
 
 ## Description
 
@@ -10,7 +10,7 @@ I was asked to create an calculator that stored previous calulations on a server
 
 ## Screen Shot
 
-<img src="https://gfycat.com/flickeringlegitimateinexpectatumpleco" width="40" height="40" />
+<img src="https://gfycat.com/flickeringlegitimateinexpectatumpleco.gif"/>
 
 ## Built With
 
