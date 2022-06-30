@@ -10,7 +10,7 @@ I was asked to create an calculator that stored previous calulations on a server
 
 ## Screen Shot
 
-Include one or two screen shots of your project here (optional). Remove if unused.
+<img src="https://gfycat.com/flickeringlegitimateinexpectatumpleco" width="40" height="40" />
 
 ## Built With
 
